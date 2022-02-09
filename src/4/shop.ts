@@ -3,11 +3,7 @@ const shop = () => {
     return value;
   }
 
-  type Content = {
-    id: ContentId,
-    name: string,
-    video: ContentVideo
-  }
+  
 
   type ContentId = number & {readonly ContentId: unique symbol};
   const ContentId = (id: number) => {
@@ -41,6 +37,11 @@ const shop = () => {
     return buffer as ContentVideo;
   }
 
+  type Content = {
+    id: ContentId,
+    name: string,
+    video: ContentVideo
+  }
 
   type Film = Content & {
     duration: number
