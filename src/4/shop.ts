@@ -37,6 +37,8 @@ const shop = () => {
     return buffer as ContentVideo;
   }
 
+  // models
+
   type Content = {
     id: ContentId,
     name: string,
