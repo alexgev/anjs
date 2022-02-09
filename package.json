@@ -1,0 +1,26 @@
+{
+  "name": "anjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=development nodemon --watch src src/index.ts",
+    "start:dev": "NODE_ENV=development nodemon --watch src src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexgev/anjs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexgev/anjs/issues"
+  },
+  "homepage": "https://github.com/alexgev/anjs#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15",
+    "typescript": "^4.5.5"
+  }
+}
