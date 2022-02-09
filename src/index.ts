@@ -1,1 +1,1 @@
-import './4/brandedType'
+import './4/shop'
