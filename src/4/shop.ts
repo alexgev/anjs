@@ -253,9 +253,9 @@ composionWithInterfaces();
   type Product =  Film | Serial;
 
 
-  type BuyBehavior = (user: User, product: Product) => Product;
+  type BuyBehavior<T extends Product> = (user: User, product: T) => T;
 
-  const buyProduct = (user: User, product: Product, behavour: BuyBehavior) => {
+  const buyProduct = <T extends Product>(user: User, product: T, behavour: BuyBehavior<T>) => {
     return behavour(user, product);
   }
 
