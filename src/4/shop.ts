@@ -229,7 +229,7 @@ composionWithInterfaces();
 
 
 /**
- * Композиция на интерфейсах
+ * Композиция на поведении
  */
 
  const behaviorComposition = () => {
