@@ -1,1 +1,1 @@
-import './5/film'
+import './6/index'
