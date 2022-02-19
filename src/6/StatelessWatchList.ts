@@ -4,9 +4,9 @@ type EntityWithId = {id: number};
 
 
 type WatchList<T extends EntityWithId> = {
-  current: T[]
-  added: T[]
-  removed: T[]
+  current: T[];
+  added: T[];
+  removed: T[];
 }
 
 export const StatelessWatchList = {
@@ -18,30 +18,30 @@ export const StatelessWatchList = {
     }
   },
 
-  add<T extends EntityWithId>(watchList: WatchList<T>, element: T): WatchList<T> {
+  add<T extends EntityWithId>(watchList: WatchList<T>, item: T): WatchList<T> {
     return {
       ...watchList,
       current: [
         ...watchList.current,
-        element
+        item
       ],
       added: [
         ...watchList.added,
-        element
+        item
       ],
     }
   },
 
   remove<T extends EntityWithId>(watchList: WatchList<T>, id: number): WatchList<T> {
-    const elementToDelete = watchList.current.find(item => item.id === id);
-    if (!elementToDelete) throw new Error('Not found');
+    const itemToDelete = watchList.current.find(item => item.id === id);
+    if (!itemToDelete) throw new Error('Not found');
     return {
       ...watchList,
       current: watchList.current.filter(item => item.id !== id),
       added: watchList.added.filter(item => item.id !== id),
       removed: [
         ...watchList.removed,
-        elementToDelete
+        itemToDelete
       ]
     }
   }
